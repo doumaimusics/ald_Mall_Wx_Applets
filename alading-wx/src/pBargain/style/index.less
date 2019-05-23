@@ -1,0 +1,123 @@
+/**
+* 砍价 独立 样式
+*/
+@px: 2px;
+
+/**
+* reset
+*/
+img {
+  width: 100%;
+  height: 100%;
+}
+body {
+  font-size: 14px;
+}
+.set-fixed {
+  position: fixed !important;
+}
+/**
+* flex
+*/
+// 水平方向各项居中
+.flex-hor-center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+// 水平方向各项顶部对齐
+.flex-hor-top() {
+  display: flex;
+  align-items: flex-start;
+}
+// 垂直方向各项居中
+.flex-ver-center() {
+  .flex-hor-center();
+  flex-direction: column;
+}
+// 默认为1
+.flex-n(@flex:1) {
+  flex: @flex;
+}
+
+/**
+* icon
+*/
+@baseUrl: 'https://img.51fanbei.com/h5/weChat/';
+// @baseUrl: '/images/';
+.image(@url) {
+  background-repeat: no-repeat;
+  background-image: url('@{baseUrl}@{url}.png');
+}
+.icon(@url, @width, @height, @position: 0deg) {
+  .image(@url);
+  width: @width;
+  height: @height;
+  background-size: 100% 100%;
+  transform: rotate(@position);
+}
+// 箭头图标
+.icon-arrow(@size: 40/ @px, @position: 0deg) {
+  .icon('icon_arrow', @size, @size);
+  transform: rotate(@position);
+}
+// 删除图标
+.icon-cancel(@size: 40/ @px) {
+  .icon('cj_cancle_g', @size, @size);
+}
+
+/**
+* color
+*/
+@color-index-bg: rgba(255, 247, 241, 1); // 砍价详情背景色
+@color-bg: #f8f8f8; // 背景色
+@color-txt: #2e2e2e; // 重要级文字信息色
+@color-txt-666: #666666; // 商品标题颜色
+@color-txt-999: #999999; // 商品标题颜色
+@color-txt-222: #222222; // 商品详情文字
+@color-txt-price: #de1414; // 价钱颜色
+@color-txt-price-2: #fc2929; // 价钱颜色 2
+@color-txt-price-3: #ff5252; // 价钱颜色 3
+
+@color-btn-bg: rgba(255, 213, 0, 1); // 砍价按钮背景色
+@color-main: #ffe110;
+/**
+* color
+*/
+@font-family-price: PingFangSC-Semibold; // 价钱字体
+/**
+* font-size
+*/
+// 常用
+@font-size-txt: 32 / @px;
+@font-size-goods-tit: 28 / @px;
+@font-size-price: 36 / @px;
+
+/**
+* 限制显示几行 文字
+*/
+.show-line(@line:1) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: @line;
+  overflow: hidden;
+}
+/**
+* 删除式 文字
+*/
+.line-through() {
+  text-decoration: line-through;
+}
+
+/**
+* border
+*/
+.border-bottom(@color: #E2E2E2) {
+  border-bottom: 1 / @px @color solid;
+}
+.border(@color:#E2E2E2) {
+  border: 1 / @px @color solid;
+}
+.border-right(@color: #E2E2E2) {
+  border-right: 1 / @px @color solid;
+}

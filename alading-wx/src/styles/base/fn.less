@@ -1,0 +1,25 @@
+// variable
+@import 'variable/color.less';
+@import 'variable/fontsize.less';
+@import 'variable/global.less';
+
+//other
+@import 'weui.css';
+
+// mixin
+@import 'mixin/base.less';
+@import 'mixin/border.less';
+@import 'mixin/box.less';
+@import 'mixin/flex.less';
+@import 'mixin/images.less';
+@import 'mixin/scroll.less';
+@import 'mixin/transition.less';
+@import 'mixin/txt.less';
+
+// 适配iphonex
+.adapt-iphonex(@padding-bottom:0) {
+  padding-bottom: @padding-bottom;
+  &.iphonex {
+    padding-bottom: @padding-bottom + @padding-iphonex;
+  }
+}

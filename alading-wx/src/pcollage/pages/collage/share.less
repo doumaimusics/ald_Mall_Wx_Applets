@@ -1,0 +1,104 @@
+@import '~@/styles/base/fn.less';
+@import '~pcollagecomp/common/userList.less';
+.collage-to-share {
+  .head {
+    padding-top: 29px;
+    padding-bottom: 20px;
+    background: white;
+    text-align: center;
+    &.share {
+      padding-top: 10px;
+    }
+
+    .info {
+      font-size: 20px;
+      font-family: PingFangSC-Medium;
+      color: @color-txt;
+      line-height: 28px;
+
+      .info-icon {
+        vertical-align: top;
+        margin-right: 5px;
+        display: inline-block;
+        .icon('icon_share_icon', 20px, 28px);
+        background-size: 100%;
+        background-position-y: 5px;
+      }
+      .info-count {
+        font-size: 24px;
+        color: @color-warn;
+      }
+    }
+
+    .info-des {
+      margin-top: 1px;
+      color: @color-warn;
+      font-size: @font-size-tip;
+    }
+
+    .collage-user-list {
+      margin-top: 12px;
+      .list-node {
+        .user-list-node(15px, 15px, 30px);
+      }
+    }
+
+    .btn-menu {
+      margin: auto;
+      margin-top: 5px;
+
+      width: 310px;
+      height: 45px;
+      line-height: 45px;
+      background: @color-btn;
+      border-radius: 23px;
+
+      font-size: @font-size-btn;
+      font-family: PingFangSC-Medium;
+      color: @color-txt;
+
+      &.b1 {
+        margin-top: 10px;
+        border: 1px solid @color-txt;
+        background: white;
+        color: @color-txt;
+        box-sizing: border-box;
+      }
+    }
+  }
+
+  .menu {
+    margin-top: 10px;
+    background: white;
+    .collage-list-cell {
+      height: 49px;
+      .title1 {
+        font-family: PingFangSC-Medium;
+      }
+      .title2 {
+        font-size: @font-size-tip;
+        color: @color-txt-3;
+        max-width: 252px;
+      }
+    }
+  }
+
+  .container {
+    margin-top: 10px;
+    .padding-v(@padding-h);
+    background: white;
+    .btn-more {
+      .flex-hor-center();
+      justify-content: center;
+
+      font-size: @font-size-btn;
+      font-family: PingFangSC-Medium;
+      color: @color-txt;
+
+      .icon-more {
+        margin-left: 5px;
+        .icon('icon_arrow_circle', 15px, 15px);
+      }
+    }
+  }
+}

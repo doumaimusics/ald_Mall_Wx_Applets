@@ -1,0 +1,17 @@
+.show-one-line {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.show-line(@line:1) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: @line;
+  overflow: hidden;
+}
+.show-two-line {
+  .show-line(2);
+}
+.show-three-line {
+  .show-line(3);
+}

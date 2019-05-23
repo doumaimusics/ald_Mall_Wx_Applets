@@ -1,0 +1,10 @@
+{
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "爱上街商城",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f9f9f9"
+  },
+  "navigateToMiniProgramAppIdList": ["wxec589676fae6b290"]
+}

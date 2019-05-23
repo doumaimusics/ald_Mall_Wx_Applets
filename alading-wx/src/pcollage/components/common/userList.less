@@ -1,0 +1,29 @@
+@import '~@/styles/base/fn.less';
+
+.user-list-node(@hgap, @vgap, @size, @cols:5) {
+  margin-right: @hgap;
+  margin-bottom: @vgap;
+  &:last-child,
+  &:nth-child(@{cols}n + @{cols}) {
+    margin-right: 0;
+  }
+  .user-image() {
+    border-radius: 50%;
+    // box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+  }
+  .user {
+    width: @size;
+    height: @size;
+    .user-defalut-icon {
+      .icon('icon_avatar_default_light', @size, @size);
+      .user-image();
+    }
+    & > img {
+      .user-image();
+    }
+  }
+  .user-empty {
+    .icon('icon_avatar_empty', @size, @size);
+    .user-image();
+  }
+}

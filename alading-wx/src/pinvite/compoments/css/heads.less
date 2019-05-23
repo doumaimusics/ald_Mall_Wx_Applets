@@ -1,0 +1,183 @@
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    background: #f5f5f5;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    #main {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+    .header_bar {
+        // position: absolute;
+        // position: fixed !important;
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+        left: 0;
+        background: #fff;
+        z-index: 10;
+    }
+    .view {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 1.28rem;
+        overflow: scroll;
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
+    }
+}
+
+.header_bar {
+    height: 1.28rem;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0 0.3rem;
+    padding-top: 0.6rem;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    position: relative;
+    &::after {
+        content: ' ';
+        display: block;
+        height: 1px;
+        transform: scaleY(.5);
+        background: #fff;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    .back {
+        flex-shrink: 0;
+        width: 1.2rem;
+        .icon-back {
+            display: block;
+            width: 0.18rem;
+            height: 0.32rem;
+            background: url("https://f.51fanbei.com/h5/app/activity/2018/hire/back.png") 0 0 no-repeat;
+            background-size: 100% 100%;
+        }
+    }
+    .title {
+        font-size: 0.32rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-weight: bold;
+    }
+    .assit {
+        font-size: 0.28rem;
+        flex-shrink: 0;
+        width: 1.2rem;
+        text-align: right;
+    }
+}
+
+// 弹窗组件
+.altwin(@width ,@height) {
+    // display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, .6);
+    top: 0;
+    left: 0;
+    z-index: 99;
+    &>div {
+        width: @width;
+        // height: @height;
+        // min-height: 4.8rem;
+        max-height: 6rem;
+        background-color: #fff;
+        border-radius: .14rem;
+        // overflow: hidden;
+        padding: 0 0 .4rem;
+        // overflow: hidden;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        display: flex;
+        flex-direction: column;
+        transform: translate(-50%, -50%);
+        &>div:nth-child(1) {
+            position: absolute;
+            left: 50%;
+            bottom: -1.15rem;
+            width: .6rem;
+            height: .6rem;
+            margin-left: -.3rem;
+            background: url('https://f.51fanbei.com/h5/app/activity/2018/09/invite_close.png') no-repeat center center /100% 100%;
+        }
+        &>div:nth-child(2) {
+            font-size: .32rem;
+            padding: .4rem 0 .34rem;
+            color: #2e2e2e;
+            text-align: center;
+            flex-shrink: 0;
+            font-family: PingFangSC-Medium;
+        }
+        &>div:nth-child(3) {
+            text-align: center;
+            box-sizing: border-box;
+            padding: 0 .2rem;
+            overflow: scroll;
+            word-break: break-all;
+            color:#999;
+            a{
+                display: inline-block;
+                color:rgb(82,181,255);
+                text-decoration: underline;
+            }
+        }
+        &>div:nth-of-type(4) {
+            margin-top: .2rem;
+            background-color: #aaa;
+            width: 80%;
+            height: .8rem;
+            line-height: .8rem;
+            margin: 0 auto;
+            text-align: center;
+            flex-shrink: 0;
+            border-radius: .1rem ;
+        }
+    }
+}
+
+@font-face {
+    /* font-properties */
+    font-family: DINCondensed-Bold;
+    src:url('/common/fonts/DIN-Condensed-Bold.ttf');
+}
+.absoluteTop {
+    padding-top: 1.28rem;
+}
+.textOver{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.ft_weight{
+    font-weight: 600 ;
+}
+/*iPhoneX的适配*/
+
+@media only screen and (device-width: 375px) and (device-height: 812px) {
+    .header_bar {
+        height: 1.48rem !important;
+        background-position-y: 0.9rem !important;
+    }
+}

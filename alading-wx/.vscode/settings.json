@@ -1,0 +1,6 @@
+{
+  "prettier.singleQuote": true,
+  "vetur.format.defaultFormatter.js": "prettier",
+  "vetur.format.defaultFormatter.html": "none",
+  "prettier.semi": false
+}

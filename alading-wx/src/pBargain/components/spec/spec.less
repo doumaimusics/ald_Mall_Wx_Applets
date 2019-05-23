@@ -1,0 +1,34 @@
+/**
+* icon
+*/
+@baseUrl: 'https://img.51fanbei.com/h5/weChat/';
+// @baseUrl: 'https://f.51fanbei.com/h5/vdian/';
+
+.image(@url) {
+  background-repeat: no-repeat;
+  background-image: url('@{baseUrl}@{url}.png');
+}
+.icon(@url, @width, @height) {
+  .image(@url);
+  width: @width;
+  height: @height;
+  background-size: 100% 100%;
+}
+/**
+* 砍价 独立 样式
+*/
+@px: 2px;
+/**
+* color
+*/
+@color-bg: #f9f9f9; // 按钮背景色
+@color-btn: #ffd500; // 按钮颜色
+
+@color-txt: #2e2e2e; // 基础文字颜色
+@color-txt-price: #ff5252; // 价钱颜色
+@color-txt-666: #666666; // 库存文字颜色
+@color-txt-999: #999999; //
+@color-txt-40: #404040; // 规格文字颜色
+@color-txt-B0: #b0b0b0; // 规格 不可选 文字颜色
+// @color-txt-B0: #B0B0B0; // 规格 不可选 文字颜色
+@color-tc-bg: rgba(0, 0, 0, 0.6);

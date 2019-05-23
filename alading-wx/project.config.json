@@ -1,0 +1,88 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"miniprogramRoot": "dist/",
+	"compileType": "miniprogram",
+	"appid": "wxcce8afadcb6d8714",
+	"projectname": "alading-wx",
+	"libVersion": "2.6.2",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 4,
+			"list": [
+				{
+					"id": 3,
+					"name": "邀请有礼页",
+					"pathName": "/pinvite/pages/index",
+					"query": "",
+					"scene": "1032"
+				},
+				{
+					"id": 1,
+					"name": "生成二维码",
+					"pathName": "pinvite/pages/showqrcode",
+					"query": "",
+					"scene": "1032"
+				},
+				{
+					"id": 2,
+					"name": "create inviter qrcode",
+					"pathName": "pinvite/pages/createInviterQrcode",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "拼团",
+					"pathName": "pcollage/pages/index/index",
+					"query": "",
+					"scene": 1014
+				},
+				{
+					"id": 4,
+					"name": "商品详情页",
+					"pathName": "pages/common/goodsDetail",
+					"query": "goodsId=138940",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "确认支付",
+					"pathName": "pages/common/orderConfirm",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "选择优惠券",
+					"pathName": "pages/common/couponChoose",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}
